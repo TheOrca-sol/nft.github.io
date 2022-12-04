@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% block title%}Home{%endblock%}
+{% block content%}
+<form  method="post" class="form-outline form-white">
+<table align="center" id="inputs" >
+<div class="form-outline form-white">
+    <tr >
+        <th class="col-3 ">Project name</th>
+        <th class="col-3">Buy</th>
+        <th class="col-3">Sell</th>
+        <th class="col-3">Fees %</th>
+        
+    </tr>
+    
+    <tr >
+        
+        <td ><input type="text" name="projectName" class="form-control "></td>
+        
+        <td class="edtProject"><input type="number" step="0.001" name="buy" class="form-control"></td>
+        
+        <td ><input type="number" step="0.001" name="sell" class="form-control"></td>
+        
+        <td ><input type="number" step="0.001" name="fees" class="form-control"></td>
+        
+    </tr>
+</div>
+  </table></br>
+  <div align="center">
+  <button disabled class="btn btn-primary">New row</button>
+  <button  type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form></br>
+
+        <table align="center">
+        <tr>
+            
+            <th id="tview" class="col-1 ">Invested</th>
+            <th id="tview" class="col-1 ">Turnover</th>
+            
+            <th id="tview" class="col-1 ">Total Net Profit</th>
+            
+            <th id="tview" class="col-1 ">Total ROI</th>
+            
+            
+        </tr>
+        
+        
+        <tr> 
+                 
+            
+            <td id="view" class="col-1 " name="rsltBuy">{{ totalBuy }}-</td>
+            <td id="view" class="col-1 " name="rsltSell">{{ totalSell }}-</td>
+            
+            
+            <td id="view" class="col-1 " name="rsltProfit"> {{totalProfit}}</td>
+            <td id="view" class="col-1 " name="time">{{ totalRoi }} </td>
+            
+            
+        </tr>
+    </table></br>
+    <div align="center">
+    <button disabled class="btn btn-primary">Depth Analytics</button></div></br>
+
+    <table align="center">
+        <tr>
+        <th id="tview" class="col-1 ">Project name</th>
+        <th id="tview" class="col-1 ">Entry</th>
+        <th id="tview" class="col-1 ">Exit</th>
+        
+        <th id="tview" class="col-1 ">Profit</th>
+        <th id="tview" class="col-1 ">% Profit</th>
+        <th id="tview" class="col-1 ">ROI</th>
+        <th id="tview" class="col-1 ">% ROI</th>
+        <th id="tview" class="col-2 ">Date </th>
+        <th id="tview" class="col-1 ">Operation </th>
+        </tr>
+    
+        {% for trade in user.trades %}  
+        <tr> 
+             
+        <td id="view" class="col-1 " name="prjName">{{ trade.projectName }}</td>
+        <td id="view" class="col-1 " name="rsltBuy">{{ trade.buy }}</td>
+        <td id="view" class="col-1 " name="rsltSell">{{ trade.sell }}</td>
+        
+        
+        <td id="view" class="col-1 " name="rsltProfit">{% if trade.profit >0 %}<img src="static/Images/up.png" width="10px" height="10px"/>{%else%}<img src="static/Images/below.png" width="10px" height="10px"/>{% endif %} {{ trade.profit }}</td>
+        <td id="view" class="col-1 " name="time">{% if trade.profit >0 %}<img src="static/Images/up.png" width="10px" height="10px"/>{%else%}<img src="static/Images/below.png" width="10px" height="10px"/>{% endif %} {{ trade.profitPercent }} %</td>
+        <td id="view" class="col-1 " name="time">{{ trade.roi }} </td>
+        <td id="view" class="col-1 " name="time">{{ trade.roiPercent }} %</td>
+        <td id="view" class="col-2 " name="time">{{ trade.date.date() }}</td>
+        <td id="view" class="col-1 "  name="time"><button  class="btn btn-danger close "  type="button" onClick="deleteTrade({{trade.id}})">
+            <span aria-hidden="true" >&times;</span>
+        </button></td>
+        
+        </tr>
+        {%endfor%}
+    </table></br>
+
+
+        
+    
+    
+    
+{%endblock%}

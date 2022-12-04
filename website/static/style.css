@@ -1,0 +1,26 @@
+#inputs{
+    color: white;
+    text-align: center;
+    
+    
+}
+#view, #tview {
+    
+    
+    border-bottom-color: gray;
+    border-bottom-style: groove;
+    
+    border-bottom-width: 2px;
+    background-color: cyan;
+    background: rgba(24, 185, 234, 0.1);
+    color: white;
+    border-radius: 3px;
+    text-align: center;
+    
+}
+#signature{
+    color: white;
+}
+h3,label{
+    color:white;
+}

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title%}Home{%endblock%}
+{% block content%}
+
+
+<form method="post">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Budget dropdown*</label>
+      <input type="text" name="username" class="form-control" id="username">
+      
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Discord ID</label>
+        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Project Name</label>
+      <input type="password"name="password1" class="form-control" id="password1">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Tweet link</label>
+        <input type="password" name="password2" class="form-control" id="password2">
+      </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Remember me</label>
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Remember me</label>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Min Characters</label>
+        <input type="password" name="password2" class="form-control" id="password2">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Min Followers</label>
+        <input type="password" name="password2" class="form-control" id="password2">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Obligatory Words</label>
+        <input type="password" name="password2" class="form-control" id="password2">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Forbidden Words</label>
+        <input type="password" name="password2" class="form-control" id="password2">
+      </div>
+      
+    <div align="center"><button type="submit" class="btn btn-primary" >Pay</button></div>
+    
+  </form>
+
+{%endblock%}

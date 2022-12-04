@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    
+    <link href="../static/style.css" rel="stylesheet">
+    <title> {% block title %}Home{% endblock %}</title>
+  </head>
+  <body class="bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+            
+                
+                <a class="nav-item nav-link" id="Home" href="/"><img src="../static/Images/Discord-Logo.png" width="40px" height="30px"/></a>
+                <a class="nav-item nav-link" id="Home" href="/chart"><img src="../static/Images/TT.png" width="40px" height="30px"/></a>
+                <a class="nav-item nav-link" id="Home" href="/"> </a>
+                <a class="nav-item nav-link" id="Home" href="/"></a>
+                <a class="nav-item nav-link" id="logout" href="/logout"></a>
+                
+                <a class="nav-item nav-link" id="login" href="/login"></a>
+                <a class="nav-item nav-link ml-auto" style="color:white;" id="signup" href="/signup"><img src="../static/Images/coin.png" width="40px" height="40px"/> 12.53 SOL</a>
+               
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div align="center">
+    <img src="../static/Images/coin.png" width="200" height="200"/></br>
+    <h3> I LIKE</h3>
+    <button type="button" class="btn btn-primary col-3">HEADS</button>
+    <button type="button" class="btn btn-primary col-3">TAILS</button></br></br>
+    <h3> FOR</h3>
+<button type="button" class="btn btn-primary col-2">0.05 SOL</button>
+<button type="button" class="btn btn-primary col-2">0.1 SOL</button>
+<button type="button" class="btn btn-primary col-2">0.25 SOL</button></br></br>
+<button type="button" class="btn btn-primary col-2">0.5 SOL</button>
+<button type="button" class="btn btn-primary col-2">1 SOL</button>
+<button type="button" class="btn btn-primary col-2">2 SOL</button></br></br>
+<button type="button" class="btn btn-primary col-6">DOUBLE OR NOTHING</button>
+</div>
+ 
+ <script
+ src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+ integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+ crossorigin="anonymous"
+></script>
+<script
+ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+ integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+ crossorigin="anonymous"
+></script>
+<script
+ src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+ integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+ crossorigin="anonymous"
+></script>
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+      
+<script type="text/javascript" src="{{ url_for('static', filename='calcul.js') }}" ></script>
+
+
+
+
+
+    </body>
+    <footer><div id="signature" align="center">
+        Made with <img src="static/Images/heart.png" width="20px" height="20px"/> by <a href="https://twitter.com/Orca_dev3">@Orca_dev3</a>
+     </div></br></footer>
+  
+    
+</html>
